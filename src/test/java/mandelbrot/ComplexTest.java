@@ -143,4 +143,14 @@ public class ComplexTest {
         assertNotEquals(Complex.ONE, Complex.I);
     }
 
+    @Test
+    void testSquaredModulus() {
+        assertEquals(0., Complex.ZERO.squaredModulus());
+        assertEquals(1., Complex.ONE.squaredModulus());
+        assertEquals(1., Complex.I.squaredModulus());
+        assertEquals(2., onePlusI.squaredModulus());
+        assertEquals(1, minusI.squaredModulus());
+        assertEquals(4, twoI.squaredModulus());
+    }
+
 }
