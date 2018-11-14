@@ -153,4 +153,10 @@ public class ComplexTest {
         assertEquals(4, twoI.squaredModulus());
     }
 
+    @Test
+    void testReal() {
+        assertEquals(Complex.ZERO, Complex.real(0));
+        assertEquals(Complex.ONE, Complex.real(1));
+    }
+
 }
