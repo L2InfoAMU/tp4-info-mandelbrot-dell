@@ -175,4 +175,12 @@ public class ComplexTest {
         assertEquals(minusOne, two.subtract(new Complex(3, 0)));
     }
 
+    @Test
+    void testMultiply() {
+        assertEquals(Complex.ZERO, Complex.I.multiply(Complex.ZERO));
+        assertEquals(Complex.ZERO, Complex.ONE.multiply(Complex.ZERO));
+        assertEquals(twoI, Complex.I.multiply(new Complex(2, 0)));
+        assertEquals(new Complex(2, 2), oneMinusI.multiply(twoI));
+    }
+
 }
